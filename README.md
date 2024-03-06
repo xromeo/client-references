@@ -2,13 +2,14 @@
 # (requerido) Una breve reseña sobre la estrategia/tecnología/frameworks utilizados en la implementación de las distintas partes de la solución, esta reseña debe estar claramente descrita en el archivo README del repositorio.
 
 En la implementación de la solución, se ha utilizado el framework Spring Boot
-Spring Boot:
 
-Spring Data JPA:
-H2 Database (Base de Datos en Memoria):
-JUnit y Mockito:
+*Spring Boot
+*Spring Data JPA:
+*H2 Database (Base de Datos en Memoria):
+*JUnit y Mockito:
 
 La estructura de directorios es la siguiente
+```
 src
 ├── main
 │   ├── java
@@ -32,7 +33,7 @@ src
 │                   └── clientreferences
 │                       ├── controller      # Pruebas de controladores
 │                       └── ClientReferencesApplicationTests.java  # Pruebas de integración
-
+```
 
 # (opcional) Archivo Dockerfile que permita desplegar la aplicación en un contenedor. En caso de crear este archivo, incluir al archivo README las instrucciones para crear y levantar la aplicación desde el Dockerfile.
 
