@@ -1,0 +1,56 @@
+{
+  "nombre": "Juan",
+  "apellidoPaterno": "García",
+  "apellidoMaterno": "López",
+  "fechaNacimiento": "1990-05-15",
+  "direccion": {
+    "ubicacionGeografica": "Ciudad X",
+    "zona": "Centro",
+    "calle": "Calle Principal",
+    "numeroDomicilio": "123",
+    "referencia": "Frente al parque"
+  },
+  "ci": "1234567"
+}
+
+
+{
+  "nombre": "María",
+  "apellidoPaterno": "Rodríguez",
+  "apellidoMaterno": "Pérez",
+  "fechaNacimiento": "1985-09-20",
+  "direccion": {
+    "ubicacionGeografica": "Ciudad Y",
+    "zona": "Residencial",
+    "calle": "Avenida Principal",
+    "numeroDomicilio": "456",
+    "referencia": "Cerca del supermercado"
+  },
+  "ci": "9876543"
+}
+
+{
+  "nombre": "Carlos",
+  "apellidoPaterno": "Martínez",
+  "apellidoMaterno": "Sánchez",
+  "fechaNacimiento": "2000-03-10",
+  "direccion": {
+    "ubicacionGeografica": "Ciudad Z",
+    "zona": "Industrial",
+    "calle": "Calle Secundaria",
+    "numeroDomicilio": "789",
+    "referencia": "Junto al taller mecánico"
+  },
+  "ci": "5432109"
+}
+
+--------------------------------------------------------
+{
+
+  "personaId": 101,
+  "email": "cliente@example.com",
+  "telefono": "+1234567890",
+  "ocupacion": "Desarrollador"
+}
+
+

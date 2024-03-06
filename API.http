@@ -1,0 +1,146 @@
+###
+
+# Crear Persona 1
+POST http://127.0.0.1:8080/api/personas/
+Authorization: Basic YWRtaW46cGFzc3dvcmQ=
+Content-Type: application/json
+
+{
+  "nombre": "Carlos",
+  "apellidoPaterno": "Martínez",
+  "apellidoMaterno": "Sánchez",
+  "fechaNacimiento": "2003-03-10",
+  "direccion": {
+    "ubicacionGeografica": "Ciudad Z",
+    "zona": "Industrial",
+    "calle": "Calle Secundaria",
+    "numeroDomicilio": "789",
+    "referencia": "Junto al taller mecánico"
+  },
+  "ci": "74321091"
+}
+
+
+###
+
+# Crear Persona 2
+POST http://127.0.0.1:8080/api/personas/
+Authorization: Basic YWRtaW46cGFzc3dvcmQ=
+Content-Type: application/json
+
+{
+  "nombre": "Carlos",
+  "apellidoPaterno": "Martínez",
+  "apellidoMaterno": "Sánchez",
+  "fechaNacimiento": "2003-03-10",
+  "direccion": {
+    "ubicacionGeografica": "Ciudad Z",
+    "zona": "Industrial",
+    "calle": "Calle Secundaria",
+    "numeroDomicilio": "789",
+    "referencia": "Junto al taller mecánico"
+  },
+  "ci": "84321091"
+}
+
+
+###
+
+# Crear Cliente asociado a la Persona 1
+
+POST http://127.0.0.1:8080/api/clientes/
+Authorization: Basic YWRtaW46cGFzc3dvcmQ=
+Content-Type: application/json
+
+{
+  "personaId": 1,
+  "email": "cliente@example.com",
+  "telefono": "+1234567890",
+  "ocupacion": "Desarrollador"
+}
+
+
+###
+
+# Obtener los clientes por Accesibilidad NULA
+GET http://127.0.0.1:8080/api/clientes/accesibilidad/NULA
+Authorization: Basic YWRtaW46cGFzc3dvcmQ=
+Content-Type: application/json
+
+###
+
+
+# Crear Referencia Personal asociado a la persona 2 para el Cliente 1
+POST http://127.0.0.1:8080/api/clientes/1/referencias
+Authorization: Basic YWRtaW46cGFzc3dvcmQ=
+Content-Type: application/json
+
+{
+  "personaId": 2,
+  "motivo": "Otro"
+}
+
+###
+
+# Obtener los clientes por Accesibilidad MALA
+GET http://127.0.0.1:8080/api/clientes/accesibilidad/MALA
+Authorization: Basic YWRtaW46cGFzc3dvcmQ=
+Content-Type: application/json
+
+###
+
+
+# Eliminar la Referencia 1 para el Cliente 1
+DELETE http://127.0.0.1:8080/api/clientes/1/referencias/1
+Authorization: Basic YWRtaW46cGFzc3dvcmQ=
+Content-Type: application/json
+
+###
+
+# Obtener el Cliente 1
+
+GET http://127.0.0.1:8080/api/clientes/1
+Authorization: Basic YWRtaW46cGFzc3dvcmQ=
+Content-Type: application/json
+
+###
+
+# Ejemplo de validacion 20 años
+POST http://127.0.0.1:8080/api/personas/
+Authorization: Basic YWRtaW46cGFzc3dvcmQ=
+Content-Type: application/json
+
+{
+  "nombre": "Luis",
+  "apellidoPaterno": "Martínez",
+  "apellidoMaterno": "Rico",
+
+  "fechaNacimiento": "2004-03-10",
+
+  "direccion": {
+    "ubicacionGeografica": "Ciudad Z",
+    "zona": "Industrial",
+    "calle": "Calle Secundaria",
+    "numeroDomicilio": "789",
+    "referencia": "Junto al taller mecánico"
+  },
+  "ci": "25321091"
+}
+
+
+###
+# Crear Cliente asociado a la Persona 3 que tiene menos de 20 años
+
+POST http://127.0.0.1:8080/api/clientes/
+Authorization: Basic YWRtaW46cGFzc3dvcmQ=
+Content-Type: application/json
+
+{
+  "personaId": 3,
+  "email": "cliente@example.com",
+  "telefono": "+1234567890",
+  "ocupacion": "Desarrollador"
+}
+
+
+
